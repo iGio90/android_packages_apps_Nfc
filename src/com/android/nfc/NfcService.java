@@ -2063,8 +2063,8 @@ public class NfcService implements DeviceHostListener {
 
     /** Returns true if airplane mode is currently on */
     boolean isAirplaneModeOn() {
-        return Settings.System.getInt(mContext.getContentResolver(),
-                Settings.System.AIRPLANE_MODE_ON, 0) == 1;
+        return Settings.Global.getInt(mContext.getContentResolver(),
+                Settings.Global.AIRPLANE_MODE_ON, 0) == 1;
     }
 
     /** for debugging only - no i18n */
